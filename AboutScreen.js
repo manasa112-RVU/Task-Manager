@@ -1,29 +1,130 @@
+// Screens/AboutScreen.js
+
 import React from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+
+import {
+  View,
+  Text,
+  StyleSheet,
+  ScrollView
+} from 'react-native';
 
 export default function AboutScreen() {
+
   return (
-    <View style={styles.container}>
+
+    <ScrollView style={styles.container}>
 
       <View style={styles.card}>
-        <Text style={styles.appName}>Task Manager</Text>
-        <Text style={styles.version}>Version 1.0</Text>
-      </View>
 
-      <View style={styles.section}>
-        <Text style={styles.heading}>About</Text>
-        <Text style={styles.text}>
-          This app helps users manage daily tasks efficiently.
+        <Text style={styles.appName}>
+          Task Manager
         </Text>
+
+        <Text style={styles.version}>
+          Version 1.0
+        </Text>
+
       </View>
 
       <View style={styles.section}>
-        <Text style={styles.heading}>Developed By</Text>
-        <Text style={styles.text}>• Team 08</Text>
-        <Text style={styles.text}>• Manasa Keerthana Anvitha Harini        </Text>
+
+        <Text style={styles.heading}>
+          About
+        </Text>
+
+        <Text style={styles.text}>
+          This application is designed to
+          help users manage and optimize
+          daily tasks efficiently through
+          task organization, productivity
+          tracking, and performance analysis.
+        </Text>
+
       </View>
 
-    </View>
+      <View style={styles.section}>
+
+        <Text style={styles.heading}>
+          Features
+        </Text>
+
+        <Text style={styles.text}>
+          • Add Tasks
+        </Text>
+
+        <Text style={styles.text}>
+          • Edit Tasks
+        </Text>
+
+        <Text style={styles.text}>
+          • Delete Tasks
+        </Text>
+
+        <Text style={styles.text}>
+          • Filter Tasks
+        </Text>
+
+        <Text style={styles.text}>
+          • Performance Tracking
+        </Text>
+
+      </View>
+
+      <View style={styles.section}>
+
+        <Text style={styles.heading}>
+          Technologies Used
+        </Text>
+
+        <Text style={styles.text}>
+          • React Native
+        </Text>
+
+        <Text style={styles.text}>
+          • JavaScript
+        </Text>
+
+        <Text style={styles.text}>
+          • React Navigation
+        </Text>
+
+      </View>
+
+      <View style={styles.section}>
+
+        <Text style={styles.heading}>
+          Developed By
+        </Text>
+
+        <Text style={styles.text}>
+          • Team 08
+        </Text>
+
+        <Text style={styles.text}>
+          • Manasa
+        </Text>
+
+        <Text style={styles.text}>
+          • Keerthana
+        </Text>
+
+        <Text style={styles.text}>
+          • Anvitha
+        </Text>
+
+        <Text style={styles.text}>
+          • Harini
+        </Text>
+
+      </View>
+
+      <Text style={styles.footer}>
+        Designed for Student Productivity 🚀
+      </Text>
+
+    </ScrollView>
+
   );
 }
 
@@ -31,45 +132,59 @@ const styles = StyleSheet.create({
 
   container: {
     flex: 1,
-    backgroundColor: '#f5f7fa',
+    backgroundColor: '#121212',
     padding: 20
   },
 
   card: {
     backgroundColor: '#6200EE',
-    padding: 20,
-    borderRadius: 15,
+    padding: 25,
+    borderRadius: 18,
     alignItems: 'center',
     marginBottom: 20
   },
 
   appName: {
     color: 'white',
-    fontSize: 22,
-    fontWeight: 'bold'
+    fontSize: 28,
+    fontWeight: 'bold',
+    textAlign: 'center'
   },
 
   version: {
     color: 'white',
-    marginTop: 5
+    marginTop: 10,
+    fontSize: 16
   },
 
   section: {
-    backgroundColor: 'white',
-    padding: 15,
-    borderRadius: 10,
-    marginBottom: 15
+    backgroundColor: '#1e1e2f',
+    padding: 18,
+    borderRadius: 15,
+    marginBottom: 18
   },
 
   heading: {
-    fontSize: 18,
+    fontSize: 20,
+    color: 'white',
     fontWeight: 'bold',
-    marginBottom: 8
+    marginBottom: 10
   },
 
   text: {
-    fontSize: 14,
-    color: '#555'
+    fontSize: 15,
+    color: '#ddd',
+    marginBottom: 5,
+    lineHeight: 22
+  },
+
+  footer: {
+    textAlign: 'center',
+    color: '#888',
+    marginTop: 20,
+    marginBottom: 40,
+    fontSize: 16,
+    fontStyle: 'italic'
   }
 
 });
